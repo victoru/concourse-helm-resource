@@ -41,8 +41,8 @@ else
   release=$(jq -r '.source.release // ""' < $payload)
 fi
 
-if [[ "$chart" == *.tgz ]]; then
-  # it's a file
+if [[ "$chart" == *.tgz ]] || [ -d "$source/$chart" ]; then
+  # it's a file or directory
   chart_full="$source/$chart"
   version=""
 else
