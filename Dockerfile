@@ -15,5 +15,6 @@ RUN cd /opt/wait-for-helm-deployment && \
 
 ADD assets /opt/resource
 RUN chmod +x /opt/resource/*
+RUN echo "127.0.0.1 localhost" > /etc/hosts
 
 ENTRYPOINT [ "/bin/bash" ]
