@@ -43,6 +43,7 @@ setup_kubernetes() {
   fi
 
   kubectl config use-context default
+  kubectl config view
   kubectl cluster-info
 }
 
